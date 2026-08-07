@@ -1,0 +1,1352 @@
+{
+  "period": "2026-08",
+  "fetched_at": "2026-08-05T19:43:53",
+  "sample_size": 20,
+  "source_counts": {
+    "realestateindia": 245
+  },
+  "region": {
+    "n": 131,
+    "avg_psqyd": 21037.200177937022,
+    "p10_psqyd": 4607.074829931973,
+    "p90_psqyd": 72785.7142857143,
+    "median_psqyd": 16000.0
+  },
+  "districts": {
+    "visakhapatnam": {
+      "n": 75,
+      "avg_psqyd": 25521.29199438957,
+      "p10_psqyd": 4607.074829931973,
+      "p90_psqyd": 72785.7142857143,
+      "mandals": [
+        "visakhapatnam-urban",
+        "bheemunipatnam",
+        "anandapuram",
+        "pendurthi",
+        "sabbavaram"
+      ]
+    },
+    "anakapalli": {
+      "n": 17,
+      "avg_psqyd": 12194.509536875696,
+      "p10_psqyd": 5000.0,
+      "p90_psqyd": 18800.000000000004,
+      "mandals": [
+        "anakapalle",
+        "atchutapuram",
+        "kasimkota",
+        "elamanchili"
+      ]
+    },
+    "vizianagaram": {
+      "n": 39,
+      "avg_psqyd": 16268.452861631942,
+      "p10_psqyd": 4850.0,
+      "p90_psqyd": 25014.97005988024,
+      "mandals": [
+        "vizianagaram",
+        "bhogapuram",
+        "denkada"
+      ]
+    }
+  },
+  "mandals": {
+    "visakhapatnam-urban": {
+      "key": "visakhapatnam-urban",
+      "label": "Visakhapatnam city (GVMC)",
+      "district": "visakhapatnam",
+      "n": 20,
+      "range_psqyd": [
+        1666.6666666666667,
+        90000.0
+      ],
+      "range_total": [
+        250000.0,
+        48400000.0
+      ],
+      "avg_psqyd": 40007.23834519171,
+      "median_psqyd": 34991.09888331445,
+      "p10_psqyd": 14921.052631578948,
+      "p90_psqyd": 72785.7142857143,
+      "std_psqyd": 24213.539873881622,
+      "avg_total": 10863650.0,
+      "raw_count": 32,
+      "qualified_count": 31,
+      "sample_listings": [
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 36667.0,
+          "price_inr": 11000000.0,
+          "area_sqyd": 300.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-300-sq-yards-1-10-cr-941970.htm"
+        },
+        {
+          "locality": "Dondaparthy",
+          "price_per_sqyd": 30000.0,
+          "price_inr": 6000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-dondaparthy-visakhapatnam-in-sai-priya-society-200-sq-yards-60-lac-1472042.htm"
+        },
+        {
+          "locality": "Gandigundam",
+          "price_per_sqyd": 17000.0,
+          "price_inr": 3400000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-gandigundam-visakhapatnam-in-iconic-2-200-sq-yards-34-lac-1484868.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 27431.0,
+          "price_inr": 7900000.0,
+          "area_sqyd": 288.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-288-sq-yards-79-lac-795204.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 35928.0,
+          "price_inr": 6000000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-167-sq-yards-60-lac-1440959.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 60000.0,
+          "price_inr": 12000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-200-sq-yards-1-20-cr-1444260.htm"
+        },
+        {
+          "locality": "Gajuwaka",
+          "price_per_sqyd": 16000.0,
+          "price_inr": 3200000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-gajuwaka-visakhapatnam-200-sq-yards-32-lac-1472436.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 71429.0,
+          "price_inr": 14000000.0,
+          "area_sqyd": 196.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-196-sq-yards-1-40-cr-1444258.htm"
+        },
+        {
+          "locality": "Gajuwaka",
+          "price_per_sqyd": 34054.0,
+          "price_inr": 3500000.0,
+          "area_sqyd": 102.8,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-gajuwaka-visakhapatnam-925-sq-ft-35-lac-1208649.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 37942.0,
+          "price_inr": 11800000.0,
+          "area_sqyd": 311.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-311-sq-yards-1-18-cr-869102.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 70000.0,
+          "price_inr": 17500000.0,
+          "area_sqyd": 250.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-250-sq-yards-1-75-cr-1217777.htm"
+        },
+        {
+          "locality": "Kurmannapalem",
+          "price_per_sqyd": 55000.0,
+          "price_inr": 48400000.0,
+          "area_sqyd": 880.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kurmannapalem-visakhapatnam-880-sq-yards-4-84-cr-1497140.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 90000.0,
+          "price_inr": 18000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-200-sq-yards-1-80-cr-1202527.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 43571.0,
+          "price_inr": 6100000.0,
+          "area_sqyd": 140.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-140-sq-yards-61-lac-1064081.htm"
+        },
+        {
+          "locality": "Gandigundam",
+          "price_per_sqyd": 19000.0,
+          "price_inr": 4123000.0,
+          "area_sqyd": 217.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-gandigundam-visakhapatnam-217-sq-yards-41-23-lac-1452221.htm"
+        },
+        {
+          "locality": "Gajuwaka",
+          "price_per_sqyd": 1667.0,
+          "price_inr": 250000.0,
+          "area_sqyd": 150.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-gajuwaka-visakhapatnam-150-sq-yards-2-50-lac-1247513.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 85000.0,
+          "price_inr": 17000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-200-sq-yards-1-70-cr-1232975.htm"
+        },
+        {
+          "locality": "Madhurawada",
+          "price_per_sqyd": 31746.0,
+          "price_inr": 12000000.0,
+          "area_sqyd": 378.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-madhurawada-visakhapatnam-378-sq-yards-1-20-cr-835160.htm"
+        },
+        {
+          "locality": "Gajuwaka",
+          "price_per_sqyd": 32500.0,
+          "price_inr": 5200000.0,
+          "area_sqyd": 160.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-gajuwaka-visakhapatnam-160-sq-yards-52-lac-1177734.htm"
+        },
+        {
+          "locality": "Gajuwaka",
+          "price_per_sqyd": 5211.0,
+          "price_inr": 9900000.0,
+          "area_sqyd": 1900.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-gajuwaka-visakhapatnam-1900-sq-yards-99-lac-1345263.htm"
+        }
+      ]
+    },
+    "bheemunipatnam": {
+      "key": "bheemunipatnam",
+      "label": "Bheemunipatnam",
+      "district": "visakhapatnam",
+      "n": 15,
+      "range_psqyd": [
+        14970.059880239522,
+        30000.0
+      ],
+      "range_total": [
+        2100000.0,
+        17800000.0
+      ],
+      "avg_psqyd": 21264.047899853907,
+      "median_psqyd": 23489.93288590604,
+      "p10_psqyd": 14988.76404494382,
+      "p90_psqyd": 27654.86570718213,
+      "std_psqyd": 5293.307986239502,
+      "avg_total": 5213333.333333333,
+      "raw_count": 15,
+      "qualified_count": 15,
+      "sample_listings": [
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 23490.0,
+          "price_inr": 3500000.0,
+          "area_sqyd": 149.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-149-sq-yards-35-lac-1135751.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 15789.0,
+          "price_inr": 2100000.0,
+          "area_sqyd": 133.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-133-sq-yards-21-lac-1493732.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 18000.0,
+          "price_inr": 3600000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-200-sq-yards-36-lac-1168181.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 25000.0,
+          "price_inr": 5000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-200-sq-yards-50-lac-1387401.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 14981.0,
+          "price_inr": 4000000.0,
+          "area_sqyd": 267.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-in-red-carpet-267-sq-yards-40-lac-1050034.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-in-red-carpet-200-sq-yards-30-lac-1050028.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 17964.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-1503-sq-ft-30-lac-1359676.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 14970.0,
+          "price_inr": 2500000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-in-red-carpet-167-sq-yards-25-lac-1050027.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 28743.0,
+          "price_inr": 4800000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-167-sq-yards-48-lac-1242882.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 24000.0,
+          "price_inr": 4800000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-200-sq-yards-48-lac-1354454.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 30000.0,
+          "price_inr": 6000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-200-sq-yards-60-lac-1430020.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 3300000.0,
+          "area_sqyd": 220.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-in-red-carpet-220-sq-yards-33-lac-1050033.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 26023.0,
+          "price_inr": 17800000.0,
+          "area_sqyd": 684.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-684-sq-yards-1-78-cr-925417.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 26000.0,
+          "price_inr": 5200000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-200-sq-yards-52-lac-1471168.htm"
+        },
+        {
+          "locality": "Bheemunipatnam",
+          "price_per_sqyd": 24000.0,
+          "price_inr": 9600000.0,
+          "area_sqyd": 400.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bheemunipatnam-visakhapatnam-400-sq-yards-96-lac-1365113.htm"
+        }
+      ]
+    },
+    "anandapuram": {
+      "key": "anandapuram",
+      "label": "Anandapuram",
+      "district": "visakhapatnam",
+      "n": 20,
+      "range_psqyd": [
+        7329.411764705883,
+        32000.0
+      ],
+      "range_total": [
+        1660000.0000000002,
+        124600000.00000001
+      ],
+      "avg_psqyd": 17386.099535655427,
+      "median_psqyd": 16333.333333333334,
+      "p10_psqyd": 12700.0,
+      "p90_psqyd": 23001.3698630137,
+      "std_psqyd": 5110.084841606181,
+      "avg_total": 11169950.0,
+      "raw_count": 28,
+      "qualified_count": 27,
+      "sample_listings": [
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 16000.0,
+          "price_inr": 3200000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-32-lac-1430906.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 15758.0,
+          "price_inr": 2600000.0,
+          "area_sqyd": 165.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-165-sq-yards-26-lac-1491427.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 16667.0,
+          "price_inr": 5000000.0,
+          "area_sqyd": 300.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-300-sq-yards-50-lac-1290100.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 7329.0,
+          "price_inr": 124600000.0,
+          "area_sqyd": 17000.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-17000-sq-yards-12-46-cr-1381025.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-30-lac-1354858.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 17000.0,
+          "price_inr": 2839000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-167-sq-yards-28-39-lac-1495457.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 13500.0,
+          "price_inr": 2700000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-27-lac-1422082.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 32000.0,
+          "price_inr": 19200000.0,
+          "area_sqyd": 600.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-600-sq-yards-1-92-cr-1254626.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 20000.0,
+          "price_inr": 4000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-in-nexus-innovation-valley-200-sq-yards-40-00-lac-1450069.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 16000.0,
+          "price_inr": 3200000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-in-bbg-true-residency-200-sq-yards-32-lac-1385756.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 10000.0,
+          "price_inr": 1660000.0,
+          "area_sqyd": 166.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-in-naidussr-empire-166-sq-yards-16-60-lac-770933.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 18491.0,
+          "price_inr": 9800000.0,
+          "area_sqyd": 530.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-530-sq-yards-98-lac-1499137.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 19000.0,
+          "price_inr": 3800000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-38-lac-1391667.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 15500.0,
+          "price_inr": 3100000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-31-lac-1430902.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 16000.0,
+          "price_inr": 3200000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-32-lac-1290598.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 22500.0,
+          "price_inr": 4500000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-45-lac-1398670.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 13000.0,
+          "price_inr": 2600000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-200-sq-yards-26-lac-1233169.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 23000.0,
+          "price_inr": 4600000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-in-highway-pearl-200-sq-yards-46-lac-1408812.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 17964.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-167-sq-yards-30-lac-1304216.htm"
+        },
+        {
+          "locality": "Anandapuram",
+          "price_per_sqyd": 23014.0,
+          "price_inr": 16800000.0,
+          "area_sqyd": 730.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anandapuram-visakhapatnam-730-sq-yards-1-68-cr-890315.htm"
+        }
+      ]
+    },
+    "pendurthi": {
+      "key": "pendurthi",
+      "label": "Pendurthi",
+      "district": "visakhapatnam",
+      "n": 7,
+      "range_psqyd": [
+        6500.0,
+        58500.0
+      ],
+      "range_total": [
+        650000.0,
+        5700000.0
+      ],
+      "avg_psqyd": 20646.481543437047,
+      "median_psqyd": 10382.513661202185,
+      "p10_psqyd": 6500.0,
+      "p90_psqyd": 45385.7142857143,
+      "std_psqyd": 18451.887896645003,
+      "avg_total": 2107142.8571428573,
+      "raw_count": 8,
+      "qualified_count": 7,
+      "sample_listings": [
+        {
+          "locality": "Pendurthi",
+          "price_per_sqyd": 19000.0,
+          "price_inr": 3800000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-pendurthi-visakhapatnam-200-sq-yards-38-lac-805737.htm"
+        },
+        {
+          "locality": "Pendurthi",
+          "price_per_sqyd": 7000.0,
+          "price_inr": 1400000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-pendurthi-visakhapatnam-200-sq-yards-14-lac-805843.htm"
+        },
+        {
+          "locality": "Pendurthi",
+          "price_per_sqyd": 6500.0,
+          "price_inr": 650000.0,
+          "area_sqyd": 100.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-pendurthi-visakhapatnam-100-sq-yards-6-50-lac-1136443.htm"
+        },
+        {
+          "locality": "Pendurthi",
+          "price_per_sqyd": 6500.0,
+          "price_inr": 650000.0,
+          "area_sqyd": 100.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-pendurthi-visakhapatnam-in-aditya-enclave-100-sq-yards-6-50-lac-1200490.htm"
+        },
+        {
+          "locality": "Pendurthi",
+          "price_per_sqyd": 36643.0,
+          "price_inr": 5700000.0,
+          "area_sqyd": 155.6,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-pendurthi-visakhapatnam-1400-sq-ft-57-lac-1190384.htm"
+        },
+        {
+          "locality": "Pendurthi",
+          "price_per_sqyd": 10383.0,
+          "price_inr": 1900000.0,
+          "area_sqyd": 183.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-pendurthi-visakhapatnam-183-sq-yards-19-lac-1372419.htm"
+        },
+        {
+          "locality": "Pendurthi",
+          "price_per_sqyd": 58500.0,
+          "price_inr": 650000.0,
+          "area_sqyd": 11.1,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-pendurthi-visakhapatnam-100-sq-ft-6-50-lac-1200516.htm"
+        }
+      ]
+    },
+    "sabbavaram": {
+      "key": "sabbavaram",
+      "label": "Sabbavaram",
+      "district": "visakhapatnam",
+      "n": 13,
+      "range_psqyd": [
+        4132.231404958678,
+        99000.0
+      ],
+      "range_total": [
+        750000.0,
+        20000000.0
+      ],
+      "avg_psqyd": 23288.004050800537,
+      "median_psqyd": 13473.053892215568,
+      "p10_psqyd": 4607.074829931973,
+      "p90_psqyd": 52666.66666666667,
+      "std_psqyd": 26699.651241234085,
+      "avg_total": 3773538.4615384615,
+      "raw_count": 13,
+      "qualified_count": 13,
+      "sample_listings": [
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 4400.0,
+          "price_inr": 2200000.0,
+          "area_sqyd": 500.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-500-sq-yards-22-lac-1502485.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 4132.0,
+          "price_inr": 20000000.0,
+          "area_sqyd": 4840.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-1-acre-2-cr-1083098.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 53333.0,
+          "price_inr": 8000000.0,
+          "area_sqyd": 150.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-150-sq-yards-80-lac-1325684.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 50000.0,
+          "price_inr": 750000.0,
+          "area_sqyd": 15.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-15-sq-yards-7-50-lac-1295292.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 12000.0,
+          "price_inr": 2400000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-200-sq-yards-24-lac-1445968.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 8000.0,
+          "price_inr": 1336000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-167-sq-yards-13-36-lac-816834.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 13473.0,
+          "price_inr": 2250000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-167-sq-yards-22-50-lac-1283761.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 5435.0,
+          "price_inr": 799000.0,
+          "area_sqyd": 147.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-in-terracon-grande-147-sq-yards-7-99-lac-793650.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 14497.0,
+          "price_inr": 2421000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-167-sq-yards-24-21-lac-1263278.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 10000.0,
+          "price_inr": 2000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-200-sq-yards-20-lac-1372160.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-200-sq-yards-30-lac-1220325.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 99000.0,
+          "price_inr": 1650000.0,
+          "area_sqyd": 16.7,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-in-sai-brindavanam-150-sq-ft-16-50-lac-1027450.htm"
+        },
+        {
+          "locality": "Sabbavaram",
+          "price_per_sqyd": 13473.0,
+          "price_inr": 2250000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-sabbavaram-visakhapatnam-167-sq-yards-22-50-lac-1283760.htm"
+        }
+      ]
+    },
+    "devarapalli": {
+      "key": "devarapalli",
+      "label": "Devarapalli",
+      "district": "visakhapatnam",
+      "n": 0,
+      "range_psqyd": [
+        0,
+        0
+      ],
+      "range_total": [
+        0,
+        0
+      ],
+      "avg_psqyd": 0.0,
+      "median_psqyd": 0.0,
+      "p10_psqyd": 0.0,
+      "p90_psqyd": 0.0,
+      "std_psqyd": 0.0,
+      "avg_total": 0.0,
+      "raw_count": 0,
+      "qualified_count": 0,
+      "sample_listings": []
+    },
+    "anakapalle": {
+      "key": "anakapalle",
+      "label": "Anakapalle",
+      "district": "anakapalli",
+      "n": 14,
+      "range_psqyd": [
+        1000.0,
+        28888.88888888889
+      ],
+      "range_total": [
+        350000.0,
+        13000000.0
+      ],
+      "avg_psqyd": 12093.333009063344,
+      "median_psqyd": 11507.575757575758,
+      "p10_psqyd": 5000.0,
+      "p90_psqyd": 18800.000000000004,
+      "std_psqyd": 6457.051702819163,
+      "avg_total": 2787714.285714286,
+      "raw_count": 16,
+      "qualified_count": 14,
+      "sample_listings": [
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 11515.0,
+          "price_inr": 1900000.0,
+          "area_sqyd": 165.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-165-sq-yards-19-lac-1313419.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 9000.0,
+          "price_inr": 2178000.0,
+          "area_sqyd": 242.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-242-sq-yards-21-78-lac-1044104.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 11236.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 267.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-267-sq-yards-30-lac-1479209.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 12000.0,
+          "price_inr": 1200000.0,
+          "area_sqyd": 100.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-in-suvarnabhoomi-status-symbol-900-sq-ft-12-lac-701164.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 8500.0,
+          "price_inr": 1700000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-200-sq-yards-17-lac-1317255.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 28889.0,
+          "price_inr": 13000000.0,
+          "area_sqyd": 450.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-450-sq-yards-1-30-cr-1492965.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 20000.0,
+          "price_inr": 4800000.0,
+          "area_sqyd": 240.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-240-sq-yards-48-lac-1355145.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 3500.0,
+          "price_inr": 350000.0,
+          "area_sqyd": 100.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-100-sq-yards-3-50-lac-1181691.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 10667.0,
+          "price_inr": 1600000.0,
+          "area_sqyd": 150.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-150-sq-yards-16-lac-1038679.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 12500.0,
+          "price_inr": 1250000.0,
+          "area_sqyd": 100.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-100-sq-yards-12-50-lac-1217952.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 13000.0,
+          "price_inr": 1950000.0,
+          "area_sqyd": 150.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-150-sq-yards-19-50-lac-1270466.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 1000.0,
+          "price_inr": 600000.0,
+          "area_sqyd": 600.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-600-sq-yards-6-lac-1146961.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 11500.0,
+          "price_inr": 2300000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-1800-sq-ft-23-lac-1245456.htm"
+        },
+        {
+          "locality": "Anakapalle",
+          "price_per_sqyd": 16000.0,
+          "price_inr": 3200000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-anakapalle-visakhapatnam-200-sq-yards-32-lac-1472441.htm"
+        }
+      ]
+    },
+    "atchutapuram": {
+      "key": "atchutapuram",
+      "label": "Achyutapuram (Atchutapuram)",
+      "district": "anakapalli",
+      "n": 1,
+      "range_psqyd": [
+        7000.0,
+        7000.0
+      ],
+      "range_total": [
+        1400000.0,
+        1400000.0
+      ],
+      "avg_psqyd": 7000.0,
+      "median_psqyd": 7000.0,
+      "p10_psqyd": 7000.0,
+      "p90_psqyd": 7000.0,
+      "std_psqyd": 0.0,
+      "avg_total": 1400000.0,
+      "raw_count": 1,
+      "qualified_count": 1,
+      "sample_listings": [
+        {
+          "locality": "Achutapuram",
+          "price_per_sqyd": 7000.0,
+          "price_inr": 1400000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-achutapuram-visakhapatnam-200-sq-yards-14-lac-1471892.htm"
+        }
+      ]
+    },
+    "kasimkota": {
+      "key": "kasimkota",
+      "label": "Kasimkota",
+      "district": "anakapalli",
+      "n": 1,
+      "range_psqyd": [
+        15000.0,
+        15000.0
+      ],
+      "range_total": [
+        3000000.0,
+        3000000.0
+      ],
+      "avg_psqyd": 15000.0,
+      "median_psqyd": 15000.0,
+      "p10_psqyd": 15000.0,
+      "p90_psqyd": 15000.0,
+      "std_psqyd": 0.0,
+      "avg_total": 3000000.0,
+      "raw_count": 1,
+      "qualified_count": 1,
+      "sample_listings": [
+        {
+          "locality": "Kasimkota",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kasimkota-visakhapatnam-200-sq-yards-30-lac-1440745.htm"
+        }
+      ]
+    },
+    "nakkapalli": {
+      "key": "nakkapalli",
+      "label": "Nakkapalli",
+      "district": "anakapalli",
+      "n": 0,
+      "range_psqyd": [
+        0,
+        0
+      ],
+      "range_total": [
+        0,
+        0
+      ],
+      "avg_psqyd": 0.0,
+      "median_psqyd": 0.0,
+      "p10_psqyd": 0.0,
+      "p90_psqyd": 0.0,
+      "std_psqyd": 0.0,
+      "avg_total": 0.0,
+      "raw_count": 0,
+      "qualified_count": 0,
+      "sample_listings": []
+    },
+    "elamanchili": {
+      "key": "elamanchili",
+      "label": "Elamanchili",
+      "district": "anakapalli",
+      "n": 1,
+      "range_psqyd": [
+        16000.0,
+        16000.0
+      ],
+      "range_total": [
+        3200000.0,
+        3200000.0
+      ],
+      "avg_psqyd": 16000.0,
+      "median_psqyd": 16000.0,
+      "p10_psqyd": 16000.0,
+      "p90_psqyd": 16000.0,
+      "std_psqyd": 0.0,
+      "avg_total": 3200000.0,
+      "raw_count": 1,
+      "qualified_count": 1,
+      "sample_listings": [
+        {
+          "locality": "Yelamanchili",
+          "price_per_sqyd": 16000.0,
+          "price_inr": 3200000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-yelamanchili-visakhapatnam-200-sq-yards-32-lac-1472442.htm"
+        }
+      ]
+    },
+    "parawada": {
+      "key": "parawada",
+      "label": "Parawada",
+      "district": "anakapalli",
+      "n": 0,
+      "range_psqyd": [
+        0,
+        0
+      ],
+      "range_total": [
+        0,
+        0
+      ],
+      "avg_psqyd": 0.0,
+      "median_psqyd": 0.0,
+      "p10_psqyd": 0.0,
+      "p90_psqyd": 0.0,
+      "std_psqyd": 0.0,
+      "avg_total": 0.0,
+      "raw_count": 0,
+      "qualified_count": 0,
+      "sample_listings": []
+    },
+    "vizianagaram": {
+      "key": "vizianagaram",
+      "label": "Vizianagaram city",
+      "district": "vizianagaram",
+      "n": 18,
+      "range_psqyd": [
+        3305.785123966942,
+        83832.33532934132
+      ],
+      "range_total": [
+        450000.0,
+        16000000.0
+      ],
+      "avg_psqyd": 14578.057652585629,
+      "median_psqyd": 12000.0,
+      "p10_psqyd": 4850.0,
+      "p90_psqyd": 17100.000000000004,
+      "std_psqyd": 17367.71280136481,
+      "avg_total": 3988222.222222222,
+      "raw_count": 19,
+      "qualified_count": 18,
+      "sample_listings": [
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 14000.0,
+          "price_inr": 2800000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-200-sq-yards-28-lac-1294738.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 12000.0,
+          "price_inr": 2400000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-visakhapatnam-200-sq-yards-24-lac-1478896.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 12500.0,
+          "price_inr": 2500000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-200-sq-yards-25-lac-1300276.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 3306.0,
+          "price_inr": 16000000.0,
+          "area_sqyd": 4840.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-1-acre-1-60-cr-1416743.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 6500.0,
+          "price_inr": 1300000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-200-sq-yards-13-lac-1436166.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 83832.0,
+          "price_inr": 14000000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-167-sq-yards-1-40-cr-905808.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 13000.0,
+          "price_inr": 2600000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-in-kohinoor-hills-200-sq-yards-26-lac-1430016.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 22000.0,
+          "price_inr": 11000000.0,
+          "area_sqyd": 500.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-500-sq-yards-1-10-cr-1303257.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 8000.0,
+          "price_inr": 888000.0,
+          "area_sqyd": 111.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-111-sq-yards-8-88-lac-1384710.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 6767.0,
+          "price_inr": 900000.0,
+          "area_sqyd": 133.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-133-sq-yards-9-lac-1246651.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 5000.0,
+          "price_inr": 750000.0,
+          "area_sqyd": 150.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-visakhapatnam-150-sq-yards-7-50-lac-1250574.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 3000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-200-sq-yards-30-lac-1291138.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 9000.0,
+          "price_inr": 1800000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-200-sq-yards-18-lac-1086096.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 4500.0,
+          "price_inr": 450000.0,
+          "area_sqyd": 100.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-100-sq-yards-4-50-lac-1089025.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 13500.0,
+          "price_inr": 5400000.0,
+          "area_sqyd": 400.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-3600-sq-ft-54-lac-1187158.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 12000.0,
+          "price_inr": 2200000.0,
+          "area_sqyd": 183.3,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-vizianagaram-1650-sq-ft-22-lac-1180738.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 12500.0,
+          "price_inr": 2000000.0,
+          "area_sqyd": 160.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-visakhapatnam-160-sq-yards-20-lac-1495180.htm"
+        },
+        {
+          "locality": "Kothavalasa",
+          "price_per_sqyd": 9000.0,
+          "price_inr": 1800000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kothavalasa-visakhapatnam-in-bramarambika-1800-sq-ft-18-lac-977147.htm"
+        }
+      ]
+    },
+    "bhogapuram": {
+      "key": "bhogapuram",
+      "label": "Bhogapuram (airport)",
+      "district": "vizianagaram",
+      "n": 20,
+      "range_psqyd": [
+        2222.222222222222,
+        29545.454545454544
+      ],
+      "range_total": [
+        720000.0,
+        6500000.0
+      ],
+      "avg_psqyd": 17854.728198843248,
+      "median_psqyd": 16982.035928143712,
+      "p10_psqyd": 12950.0,
+      "p90_psqyd": 25014.97005988024,
+      "std_psqyd": 5743.056589273726,
+      "avg_total": 3383300.0,
+      "raw_count": 46,
+      "qualified_count": 41,
+      "sample_listings": [
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 18000.0,
+          "price_inr": 3600000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-200-sq-yards-36-lac-1275302.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 17000.0,
+          "price_inr": 3400000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-in-aero-hub-200-sq-yards-34-lac-1267861.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 13000.0,
+          "price_inr": 1157000.0,
+          "area_sqyd": 89.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-89-sq-yards-11-57-lac-1475682.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 15500.0,
+          "price_inr": 3100000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-1800-sq-ft-31-lac-1235138.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 19000.0,
+          "price_inr": 3800000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-200-sq-yards-38-lac-1290600.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 12500.0,
+          "price_inr": 2500000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-200-sq-yards-25-lac-1295453.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 16500.0,
+          "price_inr": 3300000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-200-sq-yards-33-lac-1424544.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 22000.0,
+          "price_inr": 4400000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-in-kanishka-infra-200-sq-yards-44-lac-1493275.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 25000.0,
+          "price_inr": 5000000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-visakhapatnam-200-sq-yards-50-lac-1445795.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 13661.0,
+          "price_inr": 2500000.0,
+          "area_sqyd": 183.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-183-sq-yards-25-lac-1364833.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 18000.0,
+          "price_inr": 3006000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-visakhapatnam-in-vaarahi-airport-residences-167-sq-yards-30-06-lac-1471295.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 29545.0,
+          "price_inr": 6500000.0,
+          "area_sqyd": 220.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-220-sq-yards-65-lac-1406360.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 23552.0,
+          "price_inr": 4310000.0,
+          "area_sqyd": 183.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-visakhapatnam-183-sq-yards-43-10-lac-1490458.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 16500.0,
+          "price_inr": 3300000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-1800-sq-ft-33-lac-1261245.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 1440000.0,
+          "area_sqyd": 96.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-visakhapatnam-in-aduri-iconic-3-96-sq-yards-14-40-lac-1500028.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 15000.0,
+          "price_inr": 720000.0,
+          "area_sqyd": 48.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-visakhapatnam-in-aduri-iconic-3-48-sq-yards-7-20-lac-1500025.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 23000.0,
+          "price_inr": 4600000.0,
+          "area_sqyd": 200.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-in-aero-green-200-sq-yards-46-lac-1452139.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 25150.0,
+          "price_inr": 4200000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-visakhapatnam-167-sq-yards-42-lac-1445801.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 16964.0,
+          "price_inr": 2833000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-vizianagaram-167-sq-yards-28-33-lac-1433987.htm"
+        },
+        {
+          "locality": "Bhogapuram",
+          "price_per_sqyd": 2222.0,
+          "price_inr": 4000000.0,
+          "area_sqyd": 1800.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-bhogapuram-visakhapatnam-in-vaarahi-airport-residences-1800-sq-yards-40-00-lac-1501641.htm"
+        }
+      ]
+    },
+    "gajapathinagaram": {
+      "key": "gajapathinagaram",
+      "label": "Gajapathinagaram",
+      "district": "vizianagaram",
+      "n": 0,
+      "range_psqyd": [
+        0,
+        0
+      ],
+      "range_total": [
+        0,
+        0
+      ],
+      "avg_psqyd": 0.0,
+      "median_psqyd": 0.0,
+      "p10_psqyd": 0.0,
+      "p90_psqyd": 0.0,
+      "std_psqyd": 0.0,
+      "avg_total": 0.0,
+      "raw_count": 0,
+      "qualified_count": 0,
+      "sample_listings": []
+    },
+    "denkada": {
+      "key": "denkada",
+      "label": "Denkada",
+      "district": "vizianagaram",
+      "n": 1,
+      "range_psqyd": [
+        14970.059880239522,
+        14970.059880239522
+      ],
+      "range_total": [
+        2500000.0,
+        2500000.0
+      ],
+      "avg_psqyd": 14970.059880239522,
+      "median_psqyd": 14970.059880239522,
+      "p10_psqyd": 14970.059880239522,
+      "p90_psqyd": 14970.059880239522,
+      "std_psqyd": 0.0,
+      "avg_total": 2500000.0,
+      "raw_count": 1,
+      "qualified_count": 1,
+      "sample_listings": [
+        {
+          "locality": "Denkada",
+          "price_per_sqyd": 14970.0,
+          "price_inr": 2500000.0,
+          "area_sqyd": 167.0,
+          "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-denkada-vizianagaram-1503-sq-ft-25-lac-1429895.htm"
+        }
+      ]
+    }
+  }
+}

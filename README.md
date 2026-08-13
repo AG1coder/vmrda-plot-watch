@@ -74,13 +74,14 @@ scripts/run_monthly.sh
 
 ### Sources & the adapter seam
 
-`fetch.build_sources()` registers adapters. Currently **realestateindia** is the live,
-reachable adapter (its listing slugs encode locality + area + price). The major portals —
-**Housing, 99acres, MagicBricks, SquareYards** — block datacenter/headless traffic from
-this environment, so their adapters are declared as commented placeholders. To add one,
-implement a class with `slug` and `fetch() -> list[Listing]` and register it; the pipeline
-merges results from every adapter that succeeds and skips those that raise
-`SourceUnavailable` gracefully.
+`fetch.build_sources()` registers adapters. Two are **live**: **realestateindia**
+(listing feeds, slugs encode locality + area + price) and **1acre.in** (verified
+lands/plots parsed from the VMRDA map-layer pages — master-plan, airport-road and
+beach-corridor). The major portals — **Housing, 99acres, MagicBricks, SquareYards** —
+block datacenter/headless traffic from this environment, so their adapters are declared
+as commented placeholders. To add one, implement a class with `slug` and
+`fetch() -> list[Listing]` and register it; the pipeline merges results from every
+adapter that succeeds and skips those that raise `SourceUnavailable` gracefully.
 
 ### Methodology & caveats
 

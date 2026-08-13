@@ -230,12 +230,171 @@ class RealEstateIndiaAdapter:
 
 
 # --------------------------------------------------------------------------
+# 1acre.in  (live / working source)
+# --------------------------------------------------------------------------
+#
+# 1acre.in verified lands/plots are served on "map-layers" pages.  The listing
+# grid lives in a Next.js flight payload embedded as a double-escaped JSON
+# string; the public page carries `initialListingsFirstPage` (JSON API response
+# without pagination on the public side).  We fetch the page, unescape the
+# embedded JSON, and parse the listing objects.
+#
+# Listing types:
+#   - plot: total_plot_size (sq yd), total_price (₹ absolute),
+#           price_per_square_yard (₹/sq yd)
+#   - land: total_land_size (acres), price_per_acre (₹ lakhs/acre),
+#           total_price (₹ lakhs)
+# Locality/district are encoded in the listing slug and in
+# payload.seller.seller_location (e.g. district.name).
+
+class OneAcreAdapter:
+    slug = "1acre"
+    base = "https://1acre.in/map-layers/andhra-pradesh"
+    # VMRDA-relevant layer pages (each embeds up to ~32 listings, no public page
+    # pagination).  Add more layer slugs here to broaden coverage.
+    layer_pages = [
+        "lands-in-visakhapatnam-master-plan",
+        "lands-near-vizag-airport-road",
+        "lands-near-vizag-beach-road-corridor",
+    ]
+
+    def __init__(self, session=None, max_pages: int = 4, delay: float = 0.5):
+        self.session = session or (requests.Session() if requests else None)
+        self.max_pages = max_pages
+        self.delay = delay
+        self.headers = {"User-Agent": USER_AGENT,
+                        "Accept": "text/html,application/xhtml+xml,*/*;q=0.8"}
+        self._out: list[Listing] = []
+        self._seen: set = set()
+
+    def _get(self, url: str) -> str:
+        if self.session is None:
+            raise SourceUnavailable("requests not installed")
+        r = self.session.get(url, headers=self.headers, timeout=35)
+        if r.status_code != 200:
+            raise SourceUnavailable(f"HTTP {r.status_code} for {url}")
+        if len(r.text) < 10000 or "initialListingsFirstPage" not in r.text:
+            raise SourceUnavailable(f"no listing payload for {url}")
+        return r.text
+
+    # -- embedded JSON helpers -------------------------------------------
+    @staticmethod
+    def _unescape(html: str) -> str:
+        # The flight data JSON string is double-escaped: \" -> " and \\u0026 -> &
+        out = html.replace('\\"', '"')
+        out = out.replace("\\u0026", "&")
+        out = out.replace("\\/", "/")
+        return out
+
+    @staticmethod
+    def _balanced_json(s: str, start: int):
+        stack, i, in_str = [], start, False
+        while i < len(s):
+            c = s[i]
+            if in_str:
+                if c == "\\":
+                    i += 2
+                    continue
+                if c == '"':
+                    in_str = False
+            else:
+                if c == '"':
+                    in_str = True
+                elif c in "{[":
+                    stack.append(c)
+                elif c in "}]":
+                    stack.pop()
+                    if not stack:
+                        return s[start:i + 1]
+            i += 1
+        return None
+
+    def _first_page(self, html: str) -> dict | None:
+        import json as _json
+        s = self._unescape(html)
+        key = '"initialListingsFirstPage":{'
+        m = s.find(key)
+        if m < 0:
+            return None
+        obj = self._balanced_json(s, m + len('"initialListingsFirstPage":'))
+        if not obj:
+            return None
+        try:
+            return _json.loads(obj)
+        except Exception:
+            return None
+
+    # -- parse --------------------------------------------------------------
+    def _ingest(self, info: dict) -> None:
+        lst = info.get("listing") or {}
+        slug = lst.get("slug", "") or ""
+        if not slug or slug in self._seen:
+            return
+        locality = slug.replace("-", " ").strip()
+        district = (info and info.get("district")) or ""
+        # try to pull district from payload seller_location
+        payload = lst.get("payload") or {}
+        try:
+            sl = payload.get("seller", {}).get("seller_location", {})
+            district = sl.get("district", {}).get("name", district)
+        except Exception:
+            pass
+
+        price = area = None
+        if lst.get("total_plot_size") is not None:          # plot, sq yards
+            area = float(lst["total_plot_size"])
+            price = float(lst["total_price"])                # ₹ absolute
+        elif lst.get("total_land_size") is not None:          # land, acres
+            area = float(lst["total_land_size"]) * 4840.0
+            # total_price / price_per_acre are in ₹ lakhs -> absolute INR
+            price = float(lst.get("total_price", 0)) * 100_000.0
+        if price is None or area is None or area <= 0 or price <= 0:
+            return
+        url = slug
+        self._seen.add(slug)
+        self._out.append(Listing(
+            source=self.slug,
+            locality=locality,
+            district_raw=district,
+            price_inr=price,
+            area_sqyd=area,
+            price_per_sqyd=price / area,
+            url=f"https://1acre.in/lands-for-sale/{url}",
+            title=slug.replace("-", " "),
+        ))
+
+    def fetch(self) -> list[Listing]:
+        if requests is None:
+            raise SourceUnavailable("requests not installed")
+        self._out, self._seen = [], set()
+        for slug in self.layer_pages:
+            url = f"{self.base}/{slug}"
+            try:
+                html = self._get(url)
+            except SourceUnavailable as e:
+                print(f"    [1acre] skip {slug}: {e}")
+                continue
+            fp = self._first_page(html)
+            if not fp:
+                print(f"    [1acre] no listings parsed from {slug}")
+                continue
+            for info in fp.get("results", []):
+                self._ingest(info)
+            print(f"    [1acre] {slug}: {len(fp.get('results', []))} listings on page")
+            if self.delay:
+                time.sleep(self.delay)
+        print(f"    [1acre] collected {len(self._out)} unique listings")
+        return self._out
+
+
+# --------------------------------------------------------------------------
 # Adapter registry
 # --------------------------------------------------------------------------
 
 def build_sources():
     return {
         "realestateindia": RealEstateIndiaAdapter,
+        "1acre": OneAcreAdapter,
         # The major portals aggressively block datacenter/headless traffic in
         # this environment.  Adapters are declared here so the pipeline has a
         # stable seam to add them when run through a residential proxy or an

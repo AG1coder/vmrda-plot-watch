@@ -238,9 +238,11 @@ def _build_html(snapshot: dict, history: list[dict], prev: dict | None) -> str:
       <li><b>Sample sizes vary.</b> Mandals with fewer than 3 usable listings are omitted from the chart (see table for n).</li>
       <li><b>Units.</b> All prices normalized to rupees per square yard (1 sq yd = 9 sq ft); larger plots in acres are converted.</li>
       <li><b>Outlier handling.</b> Listings below ₹{config.MIN_PSQYD:,}/sq yd or above ₹{config.MAX_PSQYD:,}/sq yd are treated as artifacts and excluded.</li>
-      <li><b>Coverage.</b> Primary source reachable from the pipeline is realestateindia; the major portals
-          (Housing, 99acres, MagicBricks, SquareYards) block automated access and are attached to the
-          pipeline as adapters for when it runs through a residential proxy.</li>
+      <li><b>Coverage.</b> Live sources are realestateindia (listing feeds) and
+          1acre.in (verified lands/plots, incl. VMRDA master-plan, airport-road and
+          beach-corridor layers). The major portals (Housing, 99acres, MagicBricks,
+          SquareYards) block automated access and are attached to the pipeline as
+          adapters for when it runs through a residential proxy.</li>
       <li><b>Read it directionally.</b> These are monthly market snapshots, not valuations.</li>
     </ul>
   </div>

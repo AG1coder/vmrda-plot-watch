@@ -48,6 +48,7 @@ class Listing:
     price_per_sqyd: float  # derived: price_inr / area_sqyd
     url: str = ""
     title: str = ""
+    updated_at: str = ""   # ISO date the listing was last updated (freshness); "" = unknown
 
 
 # --------------------------------------------------------------------------
@@ -98,6 +99,26 @@ _DETAIL_ANCHOR = re.compile(
 _SLUG_AREA = re.compile(r"-(?P<area>\d+)-(?P<au>sq-?yards|sq-?yds|sq-?ft|sqyds?|acres?|acr)-")
 _SLUG_PRICE = re.compile(r"-(?P<price>\d+(?:-\d+)?)-(?P<pu>lac|lakh|crore|cr)-[0-9]+\.htm$")
 _PRICE_P = re.compile(r'r-pro-price[^>]*>\s*(.*?)\s*</p>', re.S)
+# "Posted on : 01 Jul, 2026" freshness marker on realestateindia cards.
+_POSTED_RE = re.compile(r'Posted\s*on\s*:\s*(\d{1,2})\s+([A-Za-z]{3}),?\s+(\d{4})')
+_MONTHS = {m: i for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun",
+     "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+
+
+def _parse_posted(context: str) -> str:
+    """Return an ISO date (YYYY-MM-DD) found in a 'Posted on' marker, or ''."""
+    import datetime as _dt
+    m = _POSTED_RE.search(context or "")
+    if not m:
+        return ""
+    mon = _MONTHS.get(m.group(2).lower())
+    if not mon:
+        return ""
+    try:
+        return _dt.date(int(m.group(3)), mon, int(m.group(1))).isoformat()
+    except Exception:
+        return ""
 
 
 class RealEstateIndiaAdapter:
@@ -155,7 +176,8 @@ class RealEstateIndiaAdapter:
             area_sqyd = _sqyd(float(am.group("area")), am.group("au"))
         return price_inr, area_sqyd
 
-    def _ingest_anchor(self, url: str, title_html: str, extra_html: str) -> Listing | None:
+    def _ingest_anchor(self, url: str, title_html: str, extra_html: str,
+                       context: str = "") -> Listing | None:
         url = url if url.startswith("http") else self.base + url
         if url in self._seen:
             return None
@@ -190,6 +212,7 @@ class RealEstateIndiaAdapter:
             price_per_sqyd=price / area,
             url=url,
             title=title,
+            updated_at=_parse_posted(context),
         )
         self._out.append(lst)
         return lst
@@ -203,7 +226,9 @@ class RealEstateIndiaAdapter:
             return 0
         before = len(self._seen)
         for m in _DETAIL_ANCHOR.finditer(html):
-            self._ingest_anchor(m.group("url"), m.group("title"), html[m.end():m.end() + 500])
+            self._ingest_anchor(m.group("url"), m.group("title"),
+                                html[m.end():m.end() + 500],
+                                html[max(0, m.start() - 700):])
         return len(self._seen) - before
 
     def fetch(self) -> list[Listing]:
@@ -341,13 +366,14 @@ class OneAcreAdapter:
             pass
 
         price = area = None
+        updated_at = lst.get("updated_at", "") or ""
         if lst.get("total_plot_size") is not None:          # plot, sq yards
             area = float(lst["total_plot_size"])
             price = float(lst["total_price"])                # ₹ absolute
-        elif lst.get("total_land_size") is not None:          # land, acres
-            area = float(lst["total_land_size"]) * 4840.0
-            # total_price / price_per_acre are in ₹ lakhs -> absolute INR
-            price = float(lst.get("total_price", 0)) * 100_000.0
+        else:
+            # Land type (total_land_size in acres) -> skip: we only surface
+            # plots, not big parcels, in this view.
+            return
         if price is None or area is None or area <= 0 or price <= 0:
             return
         url = slug
@@ -361,6 +387,7 @@ class OneAcreAdapter:
             price_per_sqyd=price / area,
             url=f"https://1acre.in/lands-for-sale/{url}",
             title=slug.replace("-", " "),
+            updated_at=updated_at[:10] if updated_at else "",
         ))
 
     def fetch(self) -> list[Listing]:

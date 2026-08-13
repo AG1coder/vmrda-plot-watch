@@ -64,3 +64,36 @@ def district_rollup(mandal_stats_list: list[dict]) -> dict:
         "p10_psqyd": lo,
         "p90_psqyd": hi,
     }
+
+
+def freshness_stats(sample: list, now) -> dict:
+    """Freshness summary for a sample of listings that carry an updated_at date.
+
+    Returns count, % updated within FRESHNESS_DAYS, and min/median/max age (days)
+    of the listings that have a date.  Listings without a date are counted in
+    ``n`` but excluded from the age statistics (``dated_n`` = how many had a date).
+    """
+    import datetime as _dt
+    from . import config
+    ages = []
+    for p in sample:
+        upd = getattr(p, "updated_at", "") or ""
+        if not upd:
+            continue
+        try:
+            d = _dt.date.fromisoformat(upd)
+        except Exception:
+            continue
+        ages.append((now.date() - d).days)
+    if not ages:
+        return {"dated_n": 0, "pct_fresh": 0.0, "median_age_days": None,
+                "min_age_days": None, "max_age_days": None}
+    ages_sorted = sorted(ages)
+    fresh = sum(1 for a in ages if a <= config.FRESHNESS_DAYS)
+    return {
+        "dated_n": len(ages),
+        "pct_fresh": round(fresh / len(ages) * 100, 1),
+        "median_age_days": int(_pct([float(a) for a in ages_sorted], 0.50)),
+        "min_age_days": ages_sorted[0],
+        "max_age_days": ages_sorted[-1],
+    }

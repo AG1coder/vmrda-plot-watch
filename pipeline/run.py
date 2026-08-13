@@ -16,7 +16,7 @@ import json
 from . import config
 from .fetch import fetch_all, Listing
 from .sampling import build_samples
-from .stats import mandal_stats, district_rollup
+from .stats import mandal_stats, district_rollup, freshness_stats
 from . import store
 
 
@@ -32,6 +32,7 @@ def _serialize(snapshot: dict) -> dict:
                 "price_per_sqyd": round(o.price_per_sqyd, 0),
                 "source": o.source,
                 "url": o.url,
+                "updated_at": o.updated_at,
             }
         if isinstance(o, list):
             return [clean(i) for i in o]
@@ -55,10 +56,11 @@ def build_snapshot(max_pages: int = 3, seed: int = 42, now: dt.datetime | None =
         stats = mandal_stats(s["sampled"], key, s["label"], s["district"])
         stats["raw_count"] = s["raw_count"]
         stats["qualified_count"] = s["qualified_count"]
+        stats["freshness"] = freshness_stats(s["sampled"], now)
         stats["sample_listings"] = [
             {"locality": l.locality, "price_per_sqyd": round(l.price_per_sqyd, 0),
              "price_inr": round(l.price_inr, 0), "area_sqyd": round(l.area_sqyd, 1),
-             "url": l.url}
+             "url": l.url, "source": l.source, "updated_at": l.updated_at}
             for l in s["sampled"]
         ]
         mandals_out[key] = stats
@@ -74,10 +76,12 @@ def build_snapshot(max_pages: int = 3, seed: int = 42, now: dt.datetime | None =
 
     region = district_rollup([s for s in mandals_out.values()])
 
-    # Region-wide median over the actual sampled listings (robust headline).
+    # Region-wide median + freshness over the actual sampled listings.
     import statistics as _st
-    all_psqyd = [l.price_per_sqyd for s in samples.values() for l in s["sampled"]]
+    all_samples = [l for s in samples.values() for l in s["sampled"]]
+    all_psqyd = [l.price_per_sqyd for l in all_samples]
     region["median_psqyd"] = _st.median(all_psqyd) if all_psqyd else 0.0
+    region["freshness"] = freshness_stats(all_samples, now)
 
     snapshot = {
         "period": store.snapshot_key(now),

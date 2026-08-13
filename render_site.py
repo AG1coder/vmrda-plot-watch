@@ -99,11 +99,15 @@ def _stat(snapshot: dict):
     region = snapshot["region"]
     man = _mandal_list(snapshot["mandals"])
     top = man[0]["label"] if man else "—"
+    fr = region.get("freshness", {}) or {}
     return {
         "avg": region.get("avg_psqyd", 0),
         "n": region.get("n", 0),
         "top": top,
         "top_med": man[0]["median_psqyd"] if man else 0,
+        "fresh_pct": fr.get("pct_fresh", 0.0),
+        "fresh_n": fr.get("dated_n", 0),
+        "fresh_med": fr.get("median_age_days"),
     }
 
 
@@ -165,8 +169,8 @@ def _build_html(snapshot: dict, history: list[dict], prev: dict | None) -> str:
   <div class="statband">
     <div class="stat"><div class="val">{_inr(st['avg'])}</div><div class="lbl">Avg asking / sq yd</div></div>
     <div class="stat"><div class="val">{st['n']}</div><div class="lbl">Plots sampled</div></div>
-    <div class="stat"><div class="val">{_inr(st['top_med'])}</div><div class="lbl">Highest median · {st['top']}</div></div>
     <div class="stat"><div class="val">3</div><div class="lbl">Districts covered</div></div>
+    <div class="stat"><div class="val">{st['fresh_pct']:.0f}%</div><div class="lbl">Listings fresh (&lt;{config.FRESHNESS_DAYS}d · n={st['fresh_n']})</div></div>
   </div>
 
   <p class="body lede">{para[0]}</p>
@@ -234,9 +238,16 @@ def _build_html(snapshot: dict, history: list[dict], prev: dict | None) -> str:
        listings from real-estate aggregators, tiles them onto the 16 VMRDA mandals of interest,
        filters clearly-erroneous entries, and samples up to {config.SAMPLE_SIZE} listings per mandal.</p>
     <ul>
+      <li><b>Plots only.</b> This view covers residential building plots; large land parcels
+          (typically &gt;1 acre / {config.MAX_PLOT_AREA_SQYD:,} sq yd) are excluded so farmland and
+          multi-acre sites don't skew the per-square-yard picture.</li>
+      <li><b>Freshness.</b> Every listing carries a last-updated date (1acre.in verified timestamps;
+          realestateindia "Posted on" dates). The band above shows what fraction of the sampled
+          listings were updated within the last {config.FRESHNESS_DAYS} days. Hover any marker/dot
+          to see when that listing was last refreshed.</li>
       <li><b>Asking, not transacted.</b> Prices are advertised asking prices; final deals may differ.</li>
       <li><b>Sample sizes vary.</b> Mandals with fewer than 3 usable listings are omitted from the chart (see table for n).</li>
-      <li><b>Units.</b> All prices normalized to rupees per square yard (1 sq yd = 9 sq ft); larger plots in acres are converted.</li>
+      <li><b>Units.</b> All prices normalized to rupees per square yard (1 sq yd = 9 sq ft).</li>
       <li><b>Outlier handling.</b> Listings below ₹{config.MIN_PSQYD:,}/sq yd or above ₹{config.MAX_PSQYD:,}/sq yd are treated as artifacts and excluded.</li>
       <li><b>Coverage.</b> Live sources are realestateindia (listing feeds) and
           1acre.in (verified lands/plots, incl. VMRDA master-plan, airport-road and

@@ -52,10 +52,21 @@
   }
 
   function tipFor(m) {
+    const f = m.freshness || {};
+    const fr = f.dated_n
+      ? ` · <b>${f.pct_fresh}%</b> fresh (updated &lt;90d)<br><span class="tt-r">median age ${f.median_age_days}d</span>`
+      : '';
     return `<div class="tt">${m.label}</div>
       median <b>${inr(m.median_psqyd)}</b>/sq yd · average ${inr(m.avg_psqyd)}<br>
       typical range <b>${inr(m.p10_psqyd)} – ${inr(m.p90_psqyd)}</b><br>
-      <span class="tt-r">${m.n} listing(s) · ${DISTRICT_LABELS[m.district]}</span>`;
+      <span class="tt-r">${m.n} listing(s) · ${DISTRICT_LABELS[m.district]}${fr}</span>`;
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return '';
+    const d = new Date(iso.length > 10 ? iso : iso + 'T00:00:00');
+    if (isNaN(d)) return '';
+    return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
   }
 
   // =====================================================================
@@ -96,11 +107,15 @@
         color: '#2b2b2b', weight: 2.4,
         fillColor: col(m.median_psqyd), fillOpacity: 1
       }).addTo(leafMap);
+      const f = m.freshness || {};
+      const frText = f.dated_n
+        ? ` <span style="color:#888">· ${f.pct_fresh}% fresh (&lt;90d)</span>`
+        : '';
       mm.bindTooltip(
         `<b>${m.label}</b><br>` +
         `median <b>${inr(m.median_psqyd)}</b>/sq yd &middot; avg ${inr(m.avg_psqyd)}<br>` +
         `range ${inr(m.p10_psqyd)} &ndash; ${inr(m.p90_psqyd)}<br>` +
-        `<span style="color:#888">n=${m.n} &middot; ${DISTRICT_LABELS[m.district]}</span>`,
+        `<span style="color:#888">n=${m.n} &middot; ${DISTRICT_LABELS[m.district]}${frText}</span>`,
         { sticky: true });
       mm.on('click', () => select(m.key));
       markers[m.key] = mm;
@@ -167,9 +182,13 @@
     if (!m) return;
     const diff = ((m.median_psqyd - region().avg_psqyd) / region().avg_psqyd) * 100;
     const pct = m.median_psqyd / region().avg_psqyd;
+    const f = m.freshness || {};
+    const freshLine = f.dated_n
+      ? `${f.pct_fresh}% of ${f.dated_n} dated listings were updated &lt;90d (median age ${f.median_age_days}d)`
+      : '';
     host.innerHTML = `
       <div class="d-name">${m.label} <span style="color:${DISTRICT_COLORS[m.district]};font-size:12px">· ${DISTRICT_LABELS[m.district]}</span></div>
-      <div class="d-meta">${m.n} listings sampled</div>
+      <div class="d-meta">${m.n} listings sampled${freshLine ? ' · ' + freshLine : ''}</div>
       <div class="d-grid">
         <div class="d-cell"><div class="lbl2">Median</div><div class="val2">${inr(m.median_psqyd)}</div></div>
         <div class="d-cell"><div class="lbl2">Average</div><div class="val2">${inr(m.avg_psqyd)}</div></div>
@@ -360,7 +379,7 @@
           .attr('fill', DISTRICT_COLORS[m.district]).attr('fill-opacity', 0.65)
           .style('cursor', 'pointer')
           .on('mousemove', e => moveTip(e,
-            `<div class="tt">${l.locality || m.label}</div>${inr(l.price_per_sqyd)}/sq yd · total ${inr(l.price_inr)}<br><span class="tt-r">${l.area_sqyd.toFixed(0)} sq yd</span>`))
+            `<div class="tt">${l.locality || m.label}</div>${inr(l.price_per_sqyd)}/sq yd · total ${inr(l.price_inr)}<br><span class="tt-r">${l.area_sqyd.toFixed(0)} sq yd · posted ${fmtDate(l.updated_at) || 'n/a'}</span>`))
           .on('mouseleave', hideTip);
       });
     });

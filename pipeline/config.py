@@ -24,6 +24,17 @@ SAMPLE_SIZE = 20
 MIN_PSQYD = 800
 MAX_PSQYD = 100_000
 
+# Plots only: exclude large land parcels (farmland / multi-acre plots) from the
+# sample.  A "plot" is a residential building plot, well under ~1 acre.  Bigger
+# parcels trade on a different per-area curve (₹/acre) that skews the ₹/sq.yd
+# view, so anything above this many square yards is treated as a big parcel and
+# dropped.  1 acre = 4840 sq yd.
+MAX_PLOT_AREA_SQYD = 4840
+
+# Freshness window: a listing counts as "fresh" if it was last updated within
+# this many days of the snapshot date.
+FRESHNESS_DAYS = 90
+
 # One canonical snapshot per month is stored in data/history/.
 SNAPSHOT_FORMAT = "%Y-%m"
 

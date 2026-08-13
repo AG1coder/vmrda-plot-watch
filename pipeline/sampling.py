@@ -41,6 +41,9 @@ def _qualifies(lst: Listing) -> bool:
     # Drop implausibly tiny parcels (< ~30 sq.ft) that distort per-sqyd math.
     if lst.area_sqyd < 3:
         return False
+    # Plots only: drop big land parcels (farmland / multi-acre sites).
+    if lst.area_sqyd > config.MAX_PLOT_AREA_SQYD:
+        return False
     return True
 
 

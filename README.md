@@ -9,12 +9,14 @@ Every month the pipeline:
 2. **Tiles** them onto the 16 target mandals (GVMC core, Bheemunipatnam, Anandapuram,
    Pendurthi, Sabbavaram, Devarapalli · Anakapalle, Atchutapuram, Kasimkota, Nakkapalli,
    Elamanchili, Parawada · Vizianagaram, Bhogapuram, Gajapathinagaram, Denkada).
-3. **Samples** up to 20 listings per mandal, **normalizes** every price to ₹/sq yd, and
-   **filters** clearly-erroneous entries.
-4. **Computes** range + average + median + 10th/90th-percentile metrics per mandal,
-   plus district and region roll-ups.
-5. **Persists** the monthly snapshot to `data/history/`.
-6. **Regenerates** the visualization (`site/index.html`) and the blog (`site/blog/index.html`).
+3. **Keeps plots only** — drops large land parcels (farmland / multi-acre sites) so the
+   ₹/sq yd view isn't skewed — and **samples** up to 20 listings per mandal.
+4. **Normalizes** every price to ₹/sq yd, **filters** clearly-erroneous entries, and
+   captures each listing's **freshness** (last-updated date).
+5. **Computes** range + average + median + 10th/90th-percentile metrics per mandal, plus
+   district and region roll-ups and a freshness summary per mandal/region.
+6. **Persists** the monthly snapshot to `data/history/`.
+7. **Regenerates** the visualization (`site/index.html`) and the blog (`site/blog/index.html`).
 
 ## Quick start
 
